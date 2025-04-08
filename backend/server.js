@@ -26,7 +26,8 @@ console.log("PORT:", process.env.PORT);
 // Kết nối MongoDB
 const connectDB = async() => {
     try {
-        const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/banvexe';
+        //const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/banvexe';//
+        const mongoURI = process.env.MONGO_URI || 'mongodb+srv://doanvannghia2112:Maicham2910@cluster0.azobd4f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';      
         await mongoose.connect(mongoURI);
         console.log('✅ MongoDB đã kết nối thành công!');
     } catch (error) {
